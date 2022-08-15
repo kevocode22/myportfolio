@@ -31,4 +31,10 @@ button {
     transform: scale(0.95);
   }
   
-  
+  #Lets{
+    padding: 1rem;
+    height: 1rem;
+    margin-top: 2rem;
+    background-color: #ffc23c;
+    color: white;
+  }
