@@ -13,10 +13,11 @@ import EXPRESS from '../assets/express.png'
 import REACT from '../assets/React.png'
 import NPM from '../assets/npm.png'
 import NODE from '../assets/node.png'
+import GITHUB from '../assets/github.png'
+import REDUX from '../assets/redux.png'
+import Contact from  './Contact'
 
 export default function Hero() {
-
-
   return (
 <>
 <div>
@@ -36,27 +37,33 @@ export default function Hero() {
 
 </section>
 <div>
-<Marquee className="marqueeReact marker:text-white" gradientColor='false' speed={90}><img src={REACT} alt="React.js" />  | <img src={JAVASCRIPT} alt="javascript" /> | <img src={HTML} alt="html" /> | <img src={CSS} alt="css" /> | <img src={NODE} alt="Node.js" /> | <img src={EXPRESS} alt="Express" /> | <img src={MONGO} alt="Mongo DB" /> | <img src={NPM} alt="NPM" /></Marquee>
+<Marquee className="marqueeReact marker:text-white" gradientColor='false' speed={90}><img src={REACT} alt="React.js" /> | <img src={REDUX} alt="Redux" /> | <img src={JAVASCRIPT} alt="javascript" /> | <img src={HTML} alt="html" /> | <img src={CSS} alt="css" /> | <img src={NODE} alt="Node.js" /> | <img src={EXPRESS} alt="Express" /> | <img src={MONGO} alt="Mongo DB" /> | <img src={NPM} alt="NPM" /> | <img src={GITHUB} alt="Github" /></Marquee>
 </div>
 <hr />
 <div className="About flex justify-center items-center flex-col text-center">
-  <h3 className="font-['Josefin_Sans']" id='About'>ABOUT ME</h3>
+  <h3 className="font-['Josefin_Sans'] text-2xl font-bold text-center text-[#ffc23c] sm:text-3xl" id='About'>ABOUT ME</h3>
 <p style={{fontSize:'1.8rem', width:'80%'}} className="font-['Questrial'] text-center">
-  After of more than 600 hundred hours of study, in the technologic enterprise "MINDHUB", simulating a real work environment, I can say I am a responsible, honest, and
+  After more than 600 hundred hours of study in the technologic enterprise "MINDHUB" where we simulated a real work environment, I can say I am a responsible, honest, and
 committed person at work. I have
-a hability for solving problems
+an ability for solving problems
 because I take every challenge
 seriously. I am able to adapt to
 the work given and also capable
 of working with groups of people
 or individually. I want to continue
 learning and growing
-professionally. Actually i´m still looking for learning new technologies like Angular or Vue and MySql.
+professionally. Currently I´m still looking for learning new technologies like Angular, Vue and MySql.
 </p>
 </div>
+
+<hr />
 <div className='CardsContainer flex justify-center text-center flex-wrap'>
-<h3 id='Works' style={{width: '100%'}}>WORKS</h3>
+<h3 id='Works' style={{width: '100%'}} className="text-2xl font-bold text-center text-[#ffc23c] sm:text-3xl">WORKS</h3>
 <Cards/>
+</div>
+
+<div id='Contact'>
+<Contact />
 </div>
 </>
   )
