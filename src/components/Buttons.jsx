@@ -1,7 +1,6 @@
 import React from 'react'
 import '../buttons.css'
-import Linkedin from '../assets/linkedin.png'
-import Github from '../assets/github.png'
+
 
 const Buttons = () => {
 
@@ -11,15 +10,15 @@ const Buttons = () => {
   return (
     <>
 
-      <a href={linkedin}><button href={linkedin} style={{ width: '25vh', backgroundColor: '#100F0F', color: '#ffff', display: 'flex', justifyContent: 'center', marginInline: '4vh' }}>
+      <a href={linkedin}><button className="buttonHero" href={linkedin} style={{ width: '25vh', backgroundColor: '#100F0F', color: 'white', display: 'flex', justifyContent: 'center', marginInline: '4vh' }}>
         <span style={{ 'marginRight': 7, letterSpacing: 1 }}>Linkedin</span>
-        <img src={Linkedin} style={{ height: '3vh' }} alt="Linkedin" />
+        <img src="http://cdn.onlinewebfonts.com/svg/img_24845.png" style={{ height: '5vh', backgroundColor:'white', borderRadius:'50%' }} alt="Linkedin" />
       </button></a>
 
       <a href={git}>
-        <button style={{ width: '25vh', backgroundColor: '#100F0F', color: '#ffff', display: 'flex', justifyContent: 'center' }}>
+        <button className="buttonHero" style={{ width: '25vh', backgroundColor: '#100F0F', color: 'white', display: 'flex', justifyContent: 'center' }}>
           <span style={{ 'marginRight': 7, letterSpacing: 1 }}>GitHub</span>
-          <img src={Github} style={{ height: '3vh' }} alt="GitHub" />
+          <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" style={{ height: '5vh', backgroundColor:'white', borderRadius:'50%' }} alt="GitHub" />
         </button></a>
 
     </>

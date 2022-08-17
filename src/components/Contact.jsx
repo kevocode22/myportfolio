@@ -1,9 +1,28 @@
 import React from 'react'
+import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
+    const notify = () => toast("Tu email ha sido enviado. Gracias por contactarte!", {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+    });
+
+
+    function sendEmail(e) {
+
+        e.preventDefault()
+        emailjs.sendForm('service_zdp5e26', 'template_q2vz2lp', e.target, 'NCN9d1RiqFfKH16Pl')
+    }
+
+
     return (
-
-
         <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
             <div className="max-w-lg mx-auto">
                 <h1 className="text-2xl font-bold text-center text-[#ffc23c] sm:text-3xl">Let´s work together!</h1>
@@ -12,7 +31,7 @@ const Contact = () => {
                     Contact me
                 </p>
 
-                <form action="" className="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-2xl">
+                <form onSubmit={sendEmail} className="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-2xl">
                     <p className="text-lg font-medium"></p>
                     <div>
                         <label for="name" className="text-sm font-medium">Name</label>
@@ -21,8 +40,10 @@ const Contact = () => {
                             <input
                                 type="text"
                                 id="name"
+                                name='name'
                                 className="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
                                 placeholder="Enter your name"
+                               
                             />
 
                             <span className="absolute inset-y-0 inline-flex items-center right-4">
@@ -47,8 +68,10 @@ const Contact = () => {
                             <input
                                 type="email"
                                 id="email"
+                                name="email"
                                 className="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
                                 placeholder="Enter email"
+                                required
                             />
 
                             <span className="absolute inset-y-0 inline-flex items-center right-4">
@@ -75,15 +98,29 @@ const Contact = () => {
                         <textarea
                             className="w-full p-3 text-sm border-gray-200 rounded-lg"
                             placeholder="Message"
+                            name="message"
                             rows="8"
                             id="message"
+                            required
                         ></textarea>
                     </div>
 
-                    <button type="submit" className="buttonContact block w-full px-5 py-3 text-sm font-medium text-dark bg-black text-[#ffc23d] rounded-lg">
-                       Submit
+                    <button type="submit" onClick={notify} className="buttonContact block w-full px-5 py-3 text-sm font-medium text-dark bg-black text-[#ffc23d] rounded-lg">
+                        Submit
                     </button>
                 </form>
+                <ToastContainer
+                    position="bottom-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    className="Toaster"
+                />
             </div>
         </div>
 

@@ -57,6 +57,20 @@ width: 60%;
   height: 100%;
 }
 
+.buttonHero:hover{
+  color:#ffc23c !important;
+  animation:tada;
+  animation-duration: 2s;
+}
+
+.aNav:hover{
+  color:#ffc23c !important;
+  animation:pulse !important;
+  animation-duration: 2s;
+  text-decoration: underline;
+
+}
+
 .PicProfile{
   width: 100%;
   height: 100%;
@@ -134,7 +148,9 @@ background-color: black;
   right: -25px;
   animation-name: move-down1;
 }
-
+.Toaster{
+color: orange !important;
+}
 @keyframes move-up6 {
   to {
     transform: translateY(-10px);

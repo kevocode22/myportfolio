@@ -16,8 +16,10 @@ import NODE from '../assets/node.png'
 import GITHUB from '../assets/github.png'
 import REDUX from '../assets/redux.png'
 import Contact from  './Contact'
+import 'animate.css';
 
 export default function Hero() {
+ 
   return (
 <>
 <div>
@@ -26,20 +28,18 @@ export default function Hero() {
 </div>
 <section className="containerSection">
       <div className="containerHero">
-        <h1 className="font-['Josefin_Sans'] font-bold">HI! I´M KEVIN.</h1>      
-          <h2 className="font-['Josefin_Sans'] font-semibold" style={{fontSize:'6vh', color:'#FFC23C', textShadow:'2px 2px 2px 2px black', marginTop:'3vh'}}>FULL STACK MERN DEVELOPER</h2>
-          <div className="flex justify-center"><Buttons/></div>
-
+        <h1 className="font-['Josefin_Sans'] font-bold animate__animated animate__bounceInLeft">HI! I´M KEVIN.</h1>      
+          <h2 className="font-['Josefin_Sans'] font-semibold animate__animated animate__bounceInLeft" style={{fontSize:'6vh', color:'#FFC23C', textShadow:'2px 2px 2px 2px black', marginTop:'3vh'}}>FULL STACK MERN DEVELOPER</h2>
+          <div className="flex justify-center pt-5"><Buttons/></div>
 </div>
 <div className='containerImg'>
-  <img src={profilePic} alt="PicProfile" className='PicProfile' />
+  <img src={profilePic} alt="PicProfile" className='PicProfile animate__animated animate__bounceInRight' />
 </div>
 
 </section>
 <div>
 <Marquee className="marqueeReact marker:text-white" gradientColor='false' speed={90}><img src={REACT} alt="React.js" /> | <img src={REDUX} alt="Redux" /> | <img src={JAVASCRIPT} alt="javascript" /> | <img src={HTML} alt="html" /> | <img src={CSS} alt="css" /> | <img src={NODE} alt="Node.js" /> | <img src={EXPRESS} alt="Express" /> | <img src={MONGO} alt="Mongo DB" /> | <img src={NPM} alt="NPM" /> | <img src={GITHUB} alt="Github" /></Marquee>
 </div>
-<hr />
 <div className="About flex justify-center items-center flex-col text-center">
   <h3 className="font-['Josefin_Sans'] text-2xl font-bold text-center text-[#ffc23c] sm:text-3xl" id='About'>ABOUT ME</h3>
 <p style={{fontSize:'1.8rem', width:'80%'}} className="font-['Questrial'] text-center">
@@ -56,15 +56,18 @@ professionally. Currently I´m still looking for learning new technologies like 
 </p>
 </div>
 
-<hr />
-<div className='CardsContainer flex justify-center text-center flex-wrap'>
-<h3 id='Works' style={{width: '100%'}} className="text-2xl font-bold text-center text-[#ffc23c] sm:text-3xl">WORKS</h3>
+<div className='CardsContainer flex justify-center text-center flex-wrap' >
+<h3 id='Works' style={{width: '100%'}} className="text-2xl font-bold text-center text-[#ffc23c] sm:text-3xl pt-10">WORKS</h3>
 <Cards/>
 </div>
 
-<div id='Contact'>
+<div id='Contact' >
 <Contact />
 </div>
+
+<footer className="flex justify-center text-center text-sm">
+  <p>Made with ❤️ by Kev. All rights reserved</p>
+</footer>
 </>
   )
 }

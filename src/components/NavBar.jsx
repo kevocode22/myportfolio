@@ -1,21 +1,21 @@
 import Logo from '../assets/Logotipo.png'
-import { useNavigate } from 'react-router-dom'
+import 'animate.css'
 
 export default function NavBar() {
 
-  let navigate = useNavigate()
   return (
     <nav className="navBar flex justify-around">
       <div>
-        <img src={Logo} alt="Logo Site" style={{ height: '7rem' }} />
+        <img className='animate__animated animate__pulse' src={Logo} alt="Logo Site" style={{ height: '7rem' }} />
       </div>
       <div>
-        <a onClick={() => navigate('/#Home')} href="#Home">Home</a>
-        <a onClick={() => navigate('/#About')} href="#About">About Me</a>
-        <a onClick={() => navigate('/#Works')} href="#Works">Works</a>
-        <a onClick={() => navigate('/#Contact')} href="#Contact">Contact</a></div>
+        <a className='aNav' href="#Home" >Home</a>
+        <a className='aNav' href="#About">About Me</a>
+        <a className='aNav'  href="#Works">Works</a>
+        <a className='aNav'  href="#Contact">Contact</a></div>
       <div>
-        <button id='Lets'>Let´s Talk</button>
+        <form method="post" action="mailto:ocampokevin14@gmail.com">
+        <button id='Lets' type="submit" title="ocampokevin14@gmail.com" >Let´s Talk</button></form>
       </div>
 
     </nav>
