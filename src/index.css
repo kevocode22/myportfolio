@@ -1,0 +1,308 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background: #f3f1ef;
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+  box-shadow: inset 2px 2px 2000px 2px rgb(0, 0, 0);
+  font-size: 8vh;
+}
+
+.navBar{
+  margin-top: 2rem;
+}
+
+.containerSection{
+  padding-top: 6rem;
+  display: flex;
+  justify-content: space-between !important;
+  width: 100% !important;
+  height: max-content;
+  position: relative;
+
+}
+
+nav a{
+  padding: 10px;
+  font-size: 1.3rem;
+  color: black;
+  font-family: 'Josefin Sans';
+}
+
+.containerImg{
+height: 25rem;
+width: 60%;
+}
+
+.containerHero{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  height: 100%;
+}
+
+.buttonHero:hover{
+  color:#ffc23c !important;
+  animation:tada;
+  animation-duration: 2s;
+}
+
+.aNav:hover{
+  color:#ffc23c !important;
+  animation:pulse !important;
+  animation-duration: 2s;
+  text-decoration: underline;
+
+}
+
+.PicProfile{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  bottom: 6rem;
+  object-fit: cover;
+}
+
+.marqueeReact{
+  position: relative;
+  bottom: 6.4rem;
+  background-color: black;
+  color: #ffc23c;
+  font-size: 2rem;
+  transform: rotate(-4deg) skew( -3.9deg);
+  height: 5rem;
+  width: 100%;
+}
+
+
+.marqueeReact img{
+  height: 5rem;
+  object-fit: cover !important;
+}
+
+/********************************Cards***************************************/
+/* From uiverse.io by @G4b413l */
+.card {
+  width: 25rem;
+  height: 36rem;
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+.card h4,p{
+  font-family: 'Josefin Sans';
+}
+.card button:hover{
+color: #ffc23c;
+background-color: black;
+}
+.card-inner {
+  width: inherit;
+  height: inherit;
+  background: rgba(255,255,255,.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: scale(1.04) rotate(1deg);
+}
+
+.circle {
+  width: 10rem;
+  height: 10rem;
+  background: radial-gradient(#ffe73d, #ffc23c);
+  border-radius: 50%;
+  position: absolute;
+  animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+  top: -25px;
+  left: -25px;
+}
+
+.circle:nth-child(2) {
+  bottom: -25px;
+  right: -25px;
+  animation-name: move-down1;
+}
+.Toaster{
+color: orange !important;
+}
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(10px);
+  }
+}
+
+
+.buttonContact:hover{
+background-color: #ffc23c;
+color: black;
+}
+ .About{
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-image: url('./assets/circle.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain !important;
+  box-shadow: inset 2px 2px 50px rgba(0, 0, 0, 0.61);
+  
+ }
+
+ .Works{
+  padding-top: 5rem;
+ }
+ .About h3{
+  text-shadow: 2px 2px 2px black;
+}
+
+#Works{
+  text-shadow: 2px 2px 2px black;
+
+}
+
+#Contact h1{
+  text-shadow: 2px 2px 2px black;
+  font-size: x-large;
+}
+#Contact p{
+  font-size: x-large;
+}
+
+
+ @media only screen and (min-width: 768px) {
+.marqueeReact{
+  position: relative;
+}
+.containerHero{
+  font-size: xx-large;
+}
+ h2{
+  font-size: xx-large !important;
+}
+.buttonHero{
+  width: 10rem !important;
+  height: 4rem;
+}
+
+ }
+ @media only screen and (max-width: 600px) {
+.buttonH{
+  position: relative;
+  left: 7rem;
+}
+.buttonH:hover{
+  visibility: hidden;
+}
+  body {
+    display: flex;
+    width: 100% !important;
+    justify-content: center;
+    align-items: center;
+    background: #f3f1ef;
+    background-size: 100% 100%;
+    animation: gradient 10s ease infinite;
+    box-shadow: inset 2px 2px 2000px 2px rgb(0, 0, 0);
+    font-size: 8vh;
+  }
+  .circle{
+    display: none;
+  }
+
+  .card{
+    width: 18rem;
+  }
+  .About{
+    width: 91% !important;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-image: url('./assets/circle.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain !important;
+    box-shadow: inset 2px 2px 50px rgba(0, 0, 0, 0.61);
+    
+   }
+  .buttonHero{
+    width: 8rem !important;
+    font-size: small;
+    font-family: 'Josefin Sans';
+  }
+.scrollTo{
+  margin-right: 3rem !important;
+}
+  .PicProfile{
+   border-radius: 50% !important;
+    position: relative;
+    border: #ffc23c 3px solid;
+    height: 35vh;
+    width: 35vh !important;
+    right: 9rem;
+    top: 13rem;
+
+  }
+  .containerHero{
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 1rem;
+    left: 3rem;
+  }
+  .constainerimg{
+    display: none !important;
+    width: 0% !important;
+    visibility: collapse !important;
+  }
+
+  
+  .About p{
+    font-size: 3vh !important;
+  }
+ 
+h2{
+  font-size: large !important;
+}
+.marquee{
+   display:none !important
+  }
+
+  .contactForm{
+    font-size: x-large;
+  }
+
+}
