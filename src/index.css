@@ -227,6 +227,7 @@ color: black;
 
 .containerImg{
 width: 100% !important;
+heigth:100%
 }
 .buttonH:hover{
   visibility: hidden;
@@ -272,8 +273,8 @@ width: 100% !important;
    border-radius: 50% !important;
     position: relative;
     border: #ffc23c 3px solid;
-    height: 30vh;
-    width: 30vh !important!;
+    height: 20vh;
+    width: 20vh !important!;
     object-fit: cover;
     right: 9rem;
     top: 12rem;
