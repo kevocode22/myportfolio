@@ -224,6 +224,10 @@ color: black;
   position: relative;
   left: 7rem;
 }
+
+.containerImg{
+width: 100% !important;
+}
 .buttonH:hover{
   visibility: hidden;
 }
