@@ -6,8 +6,8 @@ const Cards = () => {
 const card = info.webs
   return (
     <div className="flex justify-center w-full p-3 flex-wrap">
-        {card.map(c =>
-<div className="card m-10">
+        {card.map((c,index) =>
+<div className="card m-10" key={index}>
     <div className="circle"></div>
     <div className="circle"></div>
 

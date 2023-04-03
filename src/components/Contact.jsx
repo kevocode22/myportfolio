@@ -4,23 +4,28 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
-    const notify = () => toast.success("Tu email ha sido enviado. Gracias por contactarte!", {
-        position: "bottom-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-    });
+   
+    const formRef = React.useRef();
 
-
-    function sendEmail(e) {
-
-        e.preventDefault()
-        emailjs.sendForm('service_t8i902t', 'template_q2vz2lp', e.target, 'NCN9d1RiqFfKH16Pl')
+    function handleSubmit(evt) {
+      evt.preventDefault();
+      /*
+          1. Usamos FormData para obtener la información
+          2. FormData requiere la referencia del DOM,
+             gracias al REF API podemos pasar esa referencia
+          3. Finalmente obtenemos los datos serializados
+        */
+      const formData = new FormData(formRef.current);
+      const values = Object.fromEntries(formData);
+  console.log(values)
+  if(values.message > "   " ){
+    toast.success("Your email was sent successfully")
+  }else{
+    return toast.error("Please fill all the fields")
+  }
+  emailjs.sendForm('service_t8i902t', 'template_q2vz2lp', evt.target, 'NCN9d1RiqFfKH16Pl')
+  evt.target.reset()
     }
-
 
     return (
         <div className="contactForm max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
@@ -31,10 +36,10 @@ const Contact = () => {
                     Contact me
                 </p>
 
-                <form onSubmit={sendEmail} className="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-2xl">
+                <form onSubmit={handleSubmit} ref={formRef} className="p-8 mt-6 mb-0 space-y-4 rounded-lg shadow-2xl">
                     <p className="text-lg font-medium"></p>
                     <div>
-                        <label for="name" className="text-sm font-medium">Name</label>
+                        <label htmlFor="name" className="text-sm font-medium">Name</label>
 
                         <div className="relative mt-1">
                             <input
@@ -62,7 +67,7 @@ const Contact = () => {
                     </div>
 
                     <div>
-                        <label for="email" className="text-sm font-medium">Email</label>
+                        <label htmlFor="email" className="text-sm font-medium">Email</label>
 
                         <div className="relative mt-1">
                             <input
@@ -71,7 +76,7 @@ const Contact = () => {
                                 name="email"
                                 className="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm"
                                 placeholder="Enter email"
-                                required
+                                                          
                             />
 
                             <span className="absolute inset-y-0 inline-flex items-center right-4">
@@ -83,9 +88,9 @@ const Contact = () => {
                                     stroke="currentColor"
                                 >
                                     <path
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        stroke-width="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth="2"
                                         d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
                                     />
                                 </svg>
@@ -93,19 +98,20 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <label for="email" className="text-sm font-medium">Message</label>
+                    <label htmlFor="message" className="text-sm font-medium">Message</label>
                     <div>
                         <textarea
                             className="w-full p-3 text-sm border-gray-200 rounded-lg"
+                            type="text"
                             placeholder="Message"
                             name="message"
                             rows="8"
                             id="message"
-                            required
-                        ></textarea>
+                       
+                                                    ></textarea>
                     </div>
 
-                    <button type="submit" onClick={notify} className="buttonContact block w-full px-5 py-3 text-sm font-medium text-dark bg-black text-[#ffc23d] rounded-lg">
+                    <button type="submit" className="buttonContact block w-full px-5 py-3 text-sm font-medium text-dark bg-black text-[#ffc23d] rounded-lg">
                         Submit
                     </button>
                 </form>
