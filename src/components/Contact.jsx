@@ -4,7 +4,7 @@ import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
-    const notify = () => toast("Tu email ha sido enviado. Gracias por contactarte!", {
+    const notify = () => toast.success("Tu email ha sido enviado. Gracias por contactarte!", {
         position: "bottom-center",
         autoClose: 5000,
         hideProgressBar: false,
@@ -18,7 +18,7 @@ const Contact = () => {
     function sendEmail(e) {
 
         e.preventDefault()
-        emailjs.sendForm('service_zdp5e26', 'template_q2vz2lp', e.target, 'NCN9d1RiqFfKH16Pl')
+        emailjs.sendForm('service_t8i902t', 'template_q2vz2lp', e.target, 'NCN9d1RiqFfKH16Pl')
     }
 
 

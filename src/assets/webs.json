@@ -1,8 +1,16 @@
 {
     "webs": [
         {
+            "name": "Ermintek",
+            "web": "https://ermintek.vercel.app",
+            "git": "https://github.com/kevocode22/ermintek",
+            "image": "https://i.imgur.com/X0N9zDf.mp4",
+            "logo": "https://i.imgur.com/eRNMvAF.png",
+            "description": "E-commerce made with React and Tailwind that consumes a dynamic API. The concept is the sale of cellphones and computer products"
+        },              
+        {
             "name": "Box-Bonny",
-            "web": "https://boxbonny.herokuapp.com/",
+            "web": "https://boxbonny.vercel.app",
             "git": "https://github.com/kevocode22/Boxbonny-React",
             "image": "https://i.imgur.com/TR32RrI.mp4",
             "logo": "https://i.imgur.com/eRNMvAF.png",

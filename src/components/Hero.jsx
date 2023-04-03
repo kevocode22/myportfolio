@@ -43,7 +43,8 @@ export default function Hero() {
 <div className="About flex justify-center items-center flex-col text-center">
   <h3 className="font-['Josefin_Sans'] text-2xl font-bold text-center text-[#ffc23c] sm:text-3xl" id='About'>ABOUT ME</h3>
 <p style={{fontSize:'1.8rem', width:'80%'}} className="font-['Questrial'] text-center">
-  After more than 600 hundred hours of study in the technologic enterprise "MINDHUB" where we simulated a real work environment, I can say I am a responsible, honest, and
+  After more than 600 hundred hours of study in the technologic enterprise "MINDHUB" where we simulated a real work environment,
+   I can say am a responsible, honest, and
 committed person at work. I have
 an ability for solving problems
 because I take every challenge
@@ -52,7 +53,7 @@ the work given and also capable
 of working with groups of people
 or individually. I want to continue
 learning and growing
-professionally. Currently I´m still looking for learning new technologies like Angular, Vue and MySql.
+professionally. Currently I´m still looking to learn new technologies like blockchain for example.
 </p>
 </div>
 
@@ -65,8 +66,8 @@ professionally. Currently I´m still looking for learning new technologies like 
 <Contact />
 </div>
 
-<footer className="flex justify-center text-center text-sm">
-  <p>Made with ❤️ by Kev. All rights reserved</p>
+<footer className="flex justify-center text-center text-sm pb-10">
+  <p className='text-lg'>Made with ❤️ by Kev. All rights reserved</p>
 </footer>
 </>
   )
