@@ -10,7 +10,6 @@ const Buttons = () => {
       <div className="gap-3 flex">
         <a href={linkedin}>
           <button
-            href={linkedin}
             className="buttonHero"
             style={{
               height: "7vh",

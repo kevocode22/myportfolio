@@ -46,16 +46,15 @@ nav a {
 .marqueeReact {
   position: relative;
   background-color: black;
-  color: #ffc23c;
-  font-size: 2rem;
   transform: rotate(-4deg) skew(-3.9deg);
   height: 5rem;
   width: 100%;
 }
 
 .marqueeReact img {
-  height: 5rem;
-  object-fit: cover !important;
+  height: 100%;
+  object-fit: contain !important;
+  padding: 5px;
 }
 
 .Toastify__toast {
@@ -204,8 +203,26 @@ p {
     min-height: 15vh;
     min-width: 15vh;
     width: auto;
-    height: 10vh;
-    width: 10vh;
+  }
+
+  .containerImg {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Ajusta según la altura de tu imagen */
+    background-image: url("https://github.com/kevocode22/myportfolio/blob/0e67befc470559b23749339bc3b619bf3875af2e/src/assets/profileF.png");
+    background-size: cover;
+    background-position: center;
+    /* Crea un efecto de desvanecimiento en la parte inferior */
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.2)
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0.2)
+    );
   }
 
   @media (max-width: 375px) {

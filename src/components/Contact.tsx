@@ -2,11 +2,12 @@ import React from "react";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Buttons from "./Buttons";
 
 const Contact = () => {
-  const formRef = React.useRef();
+  const formRef = React.useRef<any>();
 
-  function handleSubmit(evt) {
+  function handleSubmit(evt: any) {
     evt.preventDefault();
 
     const formData = new FormData(formRef.current);
@@ -29,13 +30,18 @@ const Contact = () => {
   return (
     <div className="contactForm max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
       <div className="max-w-lg mx-auto">
-        <h1 className="text-2xl font-bold text-center text-[#ffc23c] sm:text-3xl">
-          Let´s work together!
-        </h1>
+        <div className="flex flex-col items-center justify-center gap-y-1">
+          <h1 className="text-2xl font-bold text-center text-[#ffc23c] sm:text-3xl">
+            Let´s work together!
+          </h1>
 
-        <p className="max-w-md mx-auto mt-4 text-center text-gray-500">
-          Contact me
-        </p>
+          <p className="max-w-md mx-auto mt-4 text-center text-gray-500">
+            Contact me
+          </p>
+          <div className="pt-3">
+            <Buttons />
+          </div>
+        </div>
 
         <form
           onSubmit={handleSubmit}
@@ -110,10 +116,8 @@ const Contact = () => {
           <div>
             <textarea
               className="w-full p-3 text-sm border-gray-200 rounded-lg"
-              type="text"
               placeholder="Message"
               name="message"
-              rows="8"
               id="message"
             ></textarea>
           </div>
