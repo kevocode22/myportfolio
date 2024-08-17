@@ -13,21 +13,12 @@ const Button: React.FC<ButtonProps> = ({
   children,
   className,
 }) => {
-  const baseStyles = "buttonHero flex justify-center items-center text-white";
-  const styles = "h-[7vh] bg-[#100F0F]"; // Estilos comunes para todos los botones
-
-  if (href) {
-    return (
-      <a href={href} className={baseStyles}>
-        <button className={styles}>{children}</button>
-      </a>
-    );
-  }
-
   return (
-    <button onClick={onClick} className={`${styles}${className}`}>
-      {children}
-    </button>
+    <a href={href} onClick={onClick}>
+      <button className="flex justify-center items-center text-white bg-black drop-shadow-md hover:bg-[#FFC23C]">
+        {children}
+      </button>
+    </a>
   );
 };
 

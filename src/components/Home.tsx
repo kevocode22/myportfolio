@@ -25,7 +25,7 @@ import {
 import Contact from "./Contact";
 import Button from "./Button";
 
-const Hero: React.FC = () => {
+const Home: React.FC = () => {
   const [showOptions, setShowOptions] = useState(false);
 
   const handleDownload = () => {
@@ -53,11 +53,15 @@ const Hero: React.FC = () => {
             <h1 className="font-['Josefin_Sans'] font-bold animate__animated animate__bounceInLeft">
               HI! I´M KEVIN.
             </h1>
-            <h2 className="font-['Josefin_Sans'] font-semibold text-2xl text-[#FFC23C] text-shadow-lg animate__animated animate__bounceInLeft">
-              A FULL STACK DEVELOPER
+            <h2 className="font-['Josefin_Sans'] font-semibold text-2xl animate__animated animate__bounceInLeft relative">
+              <span className="drop-shadow-[2px_2px_2px_rgba(0,0,0,0.7)] text-[#FFC23C]">
+                A FULL STACK DEVELOPER
+              </span>
             </h2>
-            <div className="flex w-full justify-evenly">
-              <Button onClick={handleDownload}>Download CV</Button>
+            <div className="flex w-full justify-evenly pt-5">
+              <Button onClick={handleDownload} className="bg-black">
+                Download CV
+              </Button>
               <Button href="/#Contact">Contact Me</Button>
             </div>
           </div>
@@ -72,7 +76,7 @@ const Hero: React.FC = () => {
 
         {showOptions && (
           <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-50 z-50">
-            <div className="bg-white p-4 rounded shadow-md">
+            <div className="bg-white p-4 rounded shadow-md w-max">
               <p className="mb-4 text-base">Select the language:</p>
               <div className="flex flex-col gap-y-4 justify-center text-center items-center">
                 <Button
@@ -89,7 +93,7 @@ const Hero: React.FC = () => {
                 </Button>
                 <button
                   onClick={() => setShowOptions(false)}
-                  className="m-2 bg-red-500 text-white text-sm"
+                  className="m-2 bg-red-500 text-white text-sm hover:bg-red-400"
                 >
                   Cancelar
                 </button>
@@ -173,4 +177,4 @@ const Hero: React.FC = () => {
   );
 };
 
-export default Hero;
+export default Home;
