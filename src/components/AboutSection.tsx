@@ -6,7 +6,7 @@ const AboutSection = () => {
       className="rounded-xl border-2 border-gray-100 bg-white lg:w-4/5 my-10 mx-2 max-h-fit text-black"
       id="About"
     >
-      <section className="text-black" style={{ textShadow: "none" }}>
+      <section className="text-black " style={{ textShadow: "none" }}>
         <div className="container flex flex-col">
           <div className=" mx-auto">
             <div className="flex flex-col sm:flex-row mt-10">
@@ -17,23 +17,31 @@ const AboutSection = () => {
                   <img
                     src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Man%20Technologist%20Light%20Skin%20Tone.png"
                     alt="Developer coding GIF"
-                    className="hidden sm:block max-h-48" 
+                    className="hidden sm:block max-h-48"
                   />
                 </div>
               </div>
-              <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left px-4 w-full">
+              <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 sm:text-left px-4 w-full text-justify">
                 <p className="text-lg mb-4">
-                  I´m a full-stack developer with a specialization in frontend
-                  development 👨‍💻
+                  {"I´m a "}
+                  <strong className="text-[#e89700]">
+                    full-stack developer with a specialization in frontend
+                  </strong>{" "}
+                  development.
                   <br />
                   -Some things I enjoy are spending time with my family👨‍👩‍👧‍👦,
                   eating pizza🍕, and playing soccer⚽!
                   <br />
-                  -I'm proud to have had the opportunity to work for a global
-                  leader like PUMA.
+                  -I'm proud to{" "}
+                  <strong className="text-[#e89700]">
+                    have had the opportunity to work for a global leader like
+                    PUMA.
+                  </strong>
                   <br />
-                  -I have expertise in technologies such as React, Next, Node,
-                  Typescript, and Cypress, among others.
+                  -I have expertise in technologies such as{" "}
+                  <strong className="text-[#e89700]">
+                    React, Next, Node, Typescript, and Cypress, among others.
+                  </strong>
                   <br />
                   -I'm always working on a side project to incorporate new tools
                   and concepts. If you want to know what I'm currently working
