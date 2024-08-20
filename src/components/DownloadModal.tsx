@@ -34,7 +34,7 @@ const DownloadModal: React.FC<DownloadModalProps> = ({
             onClick={() => onDownload("es")}
             className="m-2 bg-black text-white"
           >
-            Español
+            Spanish
           </Button>
           <Button
             onClick={() => onDownload("en")}
