@@ -46,7 +46,7 @@ const DownloadModal: React.FC<DownloadModalProps> = ({
             onClick={onCancel}
             className="m-2 bg-red-500 text-white text-sm hover:bg-red-400"
           >
-            Cancelar
+            Cancel
           </button>
         </div>
       </div>
