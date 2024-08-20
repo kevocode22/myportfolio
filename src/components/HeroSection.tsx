@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import { useDownloadCV } from "../hooks/useDownloadCV";
 import { ProfilePic } from "../assets";
+import DownloadModal from "./DownloadModal";
 
 const HeroSection: React.FC = () => {
-  const { handleDownload } = useDownloadCV();
+  const { downloadFile } = useDownloadCV();
+  const [showModal, setShowModal] = useState(false);
+
+  const handleModalDownload = (language: string) => {
+    downloadFile(language);
+    setShowModal(false);
+  };
   return (
     <div className="flex items-center justify-center">
       <div className="flex flex-col items-center text-center">
@@ -17,13 +24,19 @@ const HeroSection: React.FC = () => {
           </span>
         </h2>
         <div className="flex w-full justify-evenly pt-5">
-          <Button onClick={handleDownload} className="bg-black">
+          <Button onClick={() => setShowModal(true)} className="bg-black">
             Download CV
           </Button>
           <Button href="/#Contact">Contact Me</Button>
         </div>
       </div>
 
+      {showModal && (
+        <DownloadModal
+          onDownload={handleModalDownload}
+          onCancel={() => setShowModal(false)}
+        />
+      )}
       <div className="hidden sm:flex items-center justify-center w-[20%]">
         <img
           src={ProfilePic}
