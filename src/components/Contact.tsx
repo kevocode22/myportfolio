@@ -2,7 +2,7 @@ import React from "react";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import Buttons from "./Buttons";
+import Buttons from "./Buttons/Buttons";
 
 const Contact = () => {
   const formRef = React.useRef<any>();

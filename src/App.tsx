@@ -1,11 +1,11 @@
 import React from "react";
-import Hero from "./components/Home";
+import Home from "./Home";
 import ScrollToTop from "./components/ScrollToTop";
 
 const App: React.FC = () => {
   return (
     <>
-      <Hero />
+      <Home />
       <ScrollToTop />
     </>
   );

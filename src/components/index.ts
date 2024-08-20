@@ -1,0 +1,9 @@
+export { default as AboutSection } from "./AboutSection";
+export { default as Button } from "./Button";
+export { default as Cards } from "./Cards";
+export { default as Contact } from "./Contact";
+export { default as DownloadModal } from "./DownloadModal";
+export { default as Nav } from "./Nav";
+export { default as ScrollToTop } from "./ScrollToTop";
+export { default as TechMarquee } from "./TechMarquee";
+export { default as HeroSection } from "./HeroSection";

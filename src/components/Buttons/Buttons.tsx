@@ -1,5 +1,5 @@
 import React from "react";
-import "../buttons.css";
+import "./buttons.css";
 
 const Buttons = () => {
   let linkedin = "https://www.linkedin.com/in/kevinocampo22/";
